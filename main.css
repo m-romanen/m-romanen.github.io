@@ -1,0 +1,87 @@
+body {
+	font-family: verdana,arial,sans-serif;
+	background-image: url(background.jpg);
+	background-size: 100%;
+}
+
+#players {
+	margin-top: 20px;
+	margin-left: 160px;
+}
+
+#players table {
+	width: 400px;
+}
+
+#players tr:nth-child(-n+6) {
+	background-color: #a5d610;
+}
+
+#players tr {
+	background-color: #b3ecff;
+}
+
+#players td {
+	padding: 7px;
+}
+
+#games {
+	padding-bottom: 30px;
+	padding-top: 5px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.game_title {
+	color: #b3ecff;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 8px;
+	text-align: center;
+}
+
+.game_date {
+	text-align: center;
+	margin-bottom: 8px;
+	color: #ddd;
+}
+
+.buy_in {
+	margin-top: 8px;
+	color: #a5d610;
+	text-align: center;
+}
+
+.splide__track {
+	margin-top: 40px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.splide__track ul{
+	list-style-type: none;
+}
+
+.splide__slide table {
+	width: 70%;
+	margin: auto;
+}
+
+.splide__slide table tr:nth-child(1) {
+	background-color: #ffd700;
+}
+
+.splide__slide table tr:nth-child(2) {
+	background-color: #c0c0c0;
+}
+
+.splide__slide table tr:nth-child(3) {
+	background-color: #cd7f32;
+}
+
+.splide__slide table tr {
+	background-color: #b3ecff;
+}
+
+.splide__slide td {
+	padding: 7px;
+}
