@@ -33,12 +33,30 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 8, name: 'Вдович', rating: 0 },
         { id: 9, name: 'Жека', rating: 0 },
         { id: 10, name: 'Кирилл', rating: 0 },
-        { id: 11, name: 'Коча', rating: 0 }
+        { id: 11, name: 'Коча', rating: 0 },
+        { id: 12, name: 'Гасан', rating: 0 }
     ];
 
 
 
     data.games = [{
+        date: new Date(2021, APRIL, 11),
+        buyIn: 50,
+        results: [
+            { player: 1, score: NOT_PARTICIPANT },
+            { player: 2, score: PARTICIPANT },
+            { player: 3, score: PARTICIPANT },
+            { player: 4, score: SECOND_PLACE },
+            { player: 5, score: PARTICIPANT },
+            { player: 6, score: FIRST_PLACE },
+            { player: 7, score: THIRD_PLACE },
+            { player: 8, score: NOT_PARTICIPANT },
+            { player: 9, score: PARTICIPANT },
+            { player: 10, score: PARTICIPANT },
+            { player: 11, score: PARTICIPANT },
+            { player: 12, score: PARTICIPANT }
+        ]
+    }, {
         date: new Date(2021, APRIL, 4),
         buyIn: 50,
         results: [
