@@ -40,6 +40,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     data.games = [{
+        date: new Date(2021, APRIL, 25),
+        buyIn: 100,
+        results: [
+            { player: 1, score: FIRST_PLACE },
+            { player: 2, score: PARTICIPANT },
+            { player: 3, score: PARTICIPANT },
+            { player: 4, score: PARTICIPANT },
+            { player: 5, score: PARTICIPANT },
+            { player: 6, score: PARTICIPANT },
+            { player: 7, score: THIRD_PLACE },
+            { player: 8, score: SECOND_PLACE },
+            { player: 9, score: PARTICIPANT },
+            { player: 10, score: NOT_PARTICIPANT },
+            { player: 11, score: NOT_PARTICIPANT },
+            { player: 12, score: NOT_PARTICIPANT }
+        ]
+    }, {
         date: new Date(2021, APRIL, 11),
         buyIn: 50,
         results: [
