@@ -1,18 +1,7 @@
 ;
 document.addEventListener('DOMContentLoaded', function() {
 
-    JANUARY = 0;
-    FEBRUARY = 1;
-    MARCH = 2;
-    APRIL = 3;
-    MAY = 4;
-    JUNE = 5;
-    JULY = 6;
-    AUGUST = 7;
-    SEPTEMBER = 8;
-    OCTOBER = 9;
-    NOVEMBER = 10;
-    DECEMBER = 11;
+    MONTH = { JANUARY: 0, FEBRUARY: 1, MARCH: 2, APRIL: 3, MAY: 4, JUNE: 5, JULY: 6, AUGUST: 7, SEPTEMBER: 8, OCTOBER: 9, NOVEMBER: 10, DECEMBER: 11 };
 
     data = {};
 
@@ -32,29 +21,29 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     data.games = [
-        { date: new Date(2021, APRIL, 25), buyIn: 100, results: [1, 8, 7, 2, 3, 4, 5, 6, 9] },
-        { date: new Date(2021, APRIL, 11), buyIn: 50, results: [6, 4, 7, 2, 3, 5, 9, 10, 11, 12] },
-        { date: new Date(2021, APRIL, 4), buyIn: 50, results: [3, 2, 1, 4, 5, 6, 8, 9, 10, 11] },
-        { date: new Date(2021, MARCH, 21), buyIn: 50, results: [7, 4, 8, 1, 2, 3, 5, 6, 9, 10] },
-        { date: new Date(2021, MARCH, 13), buyIn: 50, results: [1, 10, 6, 2, 3, 4, 5, 7, 8, 9] },
-        { date: new Date(2021, MARCH, 4), buyIn: 50, results: [1, 7, 3, 2, 4, 5, 6, 10] },
-        { date: new Date(2021, FEBRUARY, 28), buyIn: 0, results: [9, 5, 3, 4, 6, 11] },
-        { date: new Date(2021, FEBRUARY, 6), buyIn: 0, results: [5, 9, 6, 3, 4, 10] },
-        { date: new Date(2021, JANUARY, 24), buyIn: 0, results: [10, 1, 2, 3, 4, 5, 6, 8, 9] },
-        { date: new Date(2021, JANUARY, 9), buyIn: 0, results: [1, 2, 3, 4, 5, 6, 9, 10, 11] }
+        { date: new Date(2021, MONTH.APRIL, 25), buyIn: 100, results: [1, 8, 7, 2, 3, 4, 5, 6, 9] },
+        { date: new Date(2021, MONTH.APRIL, 11), buyIn: 50, results: [6, 4, 7, 2, 3, 5, 9, 10, 11, 12] },
+        { date: new Date(2021, MONTH.APRIL, 4), buyIn: 50, results: [3, 2, 1, 4, 5, 6, 8, 9, 10, 11] },
+        { date: new Date(2021, MONTH.MARCH, 21), buyIn: 50, results: [7, 4, 8, 1, 2, 3, 5, 6, 9, 10] },
+        { date: new Date(2021, MONTH.MARCH, 13), buyIn: 50, results: [1, 10, 6, 2, 3, 4, 5, 7, 8, 9] },
+        { date: new Date(2021, MONTH.MARCH, 4), buyIn: 50, results: [1, 7, 3, 2, 4, 5, 6, 10] },
+        { date: new Date(2021, MONTH.FEBRUARY, 28), buyIn: 0, results: [9, 5, 3, 4, 6, 11] },
+        { date: new Date(2021, MONTH.FEBRUARY, 6), buyIn: 0, results: [5, 9, 6, 3, 4, 10] },
+        { date: new Date(2021, MONTH.JANUARY, 24), buyIn: 0, results: [10, 1, 2, 3, 4, 5, 6, 8, 9] },
+        { date: new Date(2021, MONTH.JANUARY, 9), buyIn: 0, results: [1, 2, 3, 4, 5, 6, 9, 10, 11] }
     ];
 
     data.getPointsByPlace = function(place) {
-        if (place == 1) {
-            return 5;
+        switch (place) {
+            case 1:
+                return 5;
+            case 2:
+                return 4;
+            case 3:
+                return 3;
+            default:
+                return 1;
         }
-        if (place == 2) {
-            return 4;
-        }
-        if (place == 3) {
-            return 3;
-        }
-        return 1;
     };
 
     data.calculatePlayersData = function() {
@@ -68,17 +57,20 @@ document.addEventListener('DOMContentLoaded', function() {
         data.games.forEach(game => {
             place = 1;
             game.results.forEach(result => {
-                data.players.find(player => player.id == result).rating += data.getPointsByPlace(place);
-                if (place == 1) {
-                    data.players.find(player => player.id == result).firstPlaces++;
+                var player = data.players.find(p => p.id == result);
+                player.rating += data.getPointsByPlace(place);
+                switch (place) {
+                    case 1:
+                        player.firstPlaces++;
+                        break;
+                    case 2:
+                        player.secondPlaces++;
+                        break;
+                    case 3:
+                        player.thirdPlaces++;
+                        break;
                 }
-                if (place == 2) {
-                    data.players.find(player => player.id == result).secondPlaces++;
-                }
-                if (place == 3) {
-                    data.players.find(player => player.id == result).thirdPlaces++;
-                }
-                data.players.find(player => player.id == result).gamesCount++;
+                player.gamesCount++;
                 place++;
             })
         });
