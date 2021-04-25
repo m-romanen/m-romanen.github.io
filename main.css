@@ -4,6 +4,56 @@ body {
     background-size: 100%;
 }
 
+#game {
+    color: burlywood;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-bottom: 50px;
+}
+
+#round {
+    font-size: 40px;
+    text-align: center;
+}
+
+#currentBlinds {
+    margin-bottom: 30px;
+    font-size: 150px;
+    text-align: center;
+}
+
+#timer {
+    font-size: 100px;
+    text-align: center;
+}
+
+#nextBlinds {
+    margin-top: 150px;
+    font-size: 40px;
+    text-align: center;
+}
+
+#removeChipsTip {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    background-color: #cd7f32;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+#startStopButton {
+    text-align: center;
+}
+
+#startStopButton span {
+    font-size: 80px;
+}
+
 #rules ul {
     list-style: inside;
 }
@@ -43,11 +93,11 @@ h2 {
 }
 
 #prizePool {
-    padding-top: 50px;
+    padding-top: 60px;
     color: burlywood;
     font-size: 40px;
     text-align: center;
-    height: 440px;
+    height: 430px;
 }
 
 #links a {
@@ -55,6 +105,7 @@ h2 {
 }
 
 #links {
+    font-size: 25px;
     color: burlywood;
     position: fixed;
     top: 20px;

@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Игра</title>
+    <script src="data.js?v=4"></script>
+    <script src="game.js?v=1"></script>
+    <link rel="stylesheet" href="main.css?v=2">
+    <link rel="stylesheet" href="splide-2.4.21/dist/css/themes/splide-skyblue.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div id="game">
+        <div id="round">
+            <a class="button" id="prevRound" onclick="goToPrevRound()"><span class="material-icons">arrow_back_ios</span></a> Round: <span id="roundId"></span> <a class="button" id="nextRound" onclick="goToNextRound()"><span class="material-icons">arrow_forward_ios</span></a>
+        </div>
+        <div id="startStopButton">
+            <a class="button" onclick="start()"><span id="startStopIcon" class="material-icons">play_arrow</span></a>
+        </div>
+        <div id="currentBlinds">
+            <span id="smallBlind"></span>/<span id="bigBlind"></span>
+        </div>
+        <div id="timer">
+            <span id="roundMinute"></span>:<span id="roundSecond"></span>
+        </div>
+        <div id="nextBlinds">
+            Next blinds: <span id="nextRoundSmallBlind"></span>/<span id="nextRoundBigBlind"></span>
+        </div>
+    </div>
+</body>
+
+</html>

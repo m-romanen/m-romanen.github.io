@@ -46,8 +46,17 @@ window.onload = (event) => {
         }).mount();
     }
 
+    drawLevelsStructure = function() {
+        var levelsHtml = '';
+        data.levels.forEach(level => {
+            levelsHtml += '<tr><td>' + level.id + '</td><td>' + level.sb + '<td></td>' + level.bb + '<td></td>' + level.time + '</td></tr>';
+        });
+        document.getElementById('structure').innerHTML += levelsHtml;
+    }
+
     drawPlayersTable();
     drawPrizePool();
     drawGamesSlider();
+    drawLevelsStructure();
 
 };
