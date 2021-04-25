@@ -1,87 +1,138 @@
 body {
-	font-family: verdana,arial,sans-serif;
-	background-image: url(background.jpg);
-	background-size: 100%;
+    font-family: verdana, arial, sans-serif;
+    background-image: url(background.jpg);
+    background-size: 100%;
+}
+
+#rules ul {
+    list-style: inside;
+}
+
+#rules table {
+    border-collapse: collapse;
+    color: burlywood;
+}
+
+#rules table td {
+    padding: 1px 90px;
+    border-bottom: 1px solid #f74a15cb;
+    text-align: center;
+}
+
+#rules h1,
+h2 {
+    text-align: center;
+}
+
+#rules {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: auto;
+    width: 1000px;
+    color: burlywood;
 }
 
 #players {
-	margin-top: 20px;
-	margin-left: 160px;
+    margin-top: 20px;
+    margin-left: 160px;
+    float: left;
 }
 
 #players table {
-	width: 400px;
+    width: 600px;
 }
 
-#players tr:nth-child(-n+6) {
-	background-color: #a5d610;
+#prizePool {
+    padding-top: 50px;
+    color: burlywood;
+    font-size: 40px;
+    text-align: center;
+    height: 440px;
+}
+
+#links a {
+    color: burlywood;
+}
+
+#links {
+    color: burlywood;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+}
+
+#players tr:nth-child(1) {
+    background-color: #f74a15cb !important;
+}
+
+#players tr:nth-child(-n+7) {
+    background-color: #a5d610;
 }
 
 #players tr {
-	background-color: #b3ecff;
+    background-color: #b3ecff;
 }
 
 #players td {
-	padding: 7px;
+    padding: 6px;
 }
 
 #games {
-	padding-bottom: 30px;
-	padding-top: 5px;
-	background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 30px;
+    padding-top: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .game_title {
-	color: #b3ecff;
-	font-size: 1.5em;
-	font-weight: bold;
-	margin-bottom: 8px;
-	text-align: center;
+    color: #b3ecff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 .game_date {
-	text-align: center;
-	margin-bottom: 8px;
-	color: #ddd;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #ddd;
 }
 
 .buy_in {
-	margin-top: 8px;
-	color: #a5d610;
-	text-align: center;
+    margin-top: 8px;
+    color: #a5d610;
+    text-align: center;
 }
 
 .splide__track {
-	margin-top: 40px;
-	margin-left: 100px;
-	margin-right: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
-.splide__track ul{
-	list-style-type: none;
+.splide__track ul {
+    list-style-type: none;
 }
 
 .splide__slide table {
-	width: 70%;
-	margin: auto;
+    width: 70%;
+    margin: auto;
 }
 
 .splide__slide table tr:nth-child(1) {
-	background-color: #ffd700;
+    background-color: #ffd700;
 }
 
 .splide__slide table tr:nth-child(2) {
-	background-color: #c0c0c0;
+    background-color: #c0c0c0;
 }
 
 .splide__slide table tr:nth-child(3) {
-	background-color: #cd7f32;
+    background-color: #cd7f32;
 }
 
 .splide__slide table tr {
-	background-color: #b3ecff;
+    background-color: #b3ecff;
 }
 
 .splide__slide td {
-	padding: 7px;
+    padding: 6px;
 }
